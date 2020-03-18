@@ -23,7 +23,6 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).to have_content(shelter1.zip)
 
       expect(page).not_to have_content(shelter2.name)
-
     end
   
   
