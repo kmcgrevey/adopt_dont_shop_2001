@@ -6,3 +6,5 @@
 <p><%= @shelter.zip %></p>
 
 <%= button_to 'Update Shelter', "/shelters/#{@shelter.id}/edit", method: :get %>
+
+<%= button_to 'Delete Shelter', "/shelters/#{@shelter.id}", method: :delete %>
