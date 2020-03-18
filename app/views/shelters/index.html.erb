@@ -1,0 +1,8 @@
+<h1>All Shelters</h1>
+
+<%= button_to 'New Shelter', "/shelters/new", method: :get %>
+
+
+<% @shelters.each do |shelter| %>
+  <h2><%= shelter.name %></h2>
+<% end %>
