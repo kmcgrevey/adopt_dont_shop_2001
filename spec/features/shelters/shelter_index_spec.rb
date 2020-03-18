@@ -20,6 +20,12 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).to have_content(shelter2.name)
     end
 
+    it "it has a button to create a new shelter" do
+      visit "/shelters"
+      
+      expect(page).to have_button("New Shelter")
+    end
+
 
   end
 
