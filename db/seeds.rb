@@ -1,3 +1,6 @@
+Shelter.detroy_all
+Pet.detroy_all
+
 shelter1 = Shelter.create!(name: "Burt's Barn",
                            address: "123 Sesame Street",
                            city: "New York",
