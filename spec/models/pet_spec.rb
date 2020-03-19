@@ -9,7 +9,7 @@ RSpec.describe Pet, type: :model do
   end
 
   describe "relationships" do
-    it {should_belong_to :shelter}
+    it {should belong_to :shelter}
   end
 
 end
