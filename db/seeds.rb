@@ -1,5 +1,5 @@
-Shelter.detroy_all
-Pet.detroy_all
+Shelter.destroy_all
+Pet.destroy_all
 
 shelter1 = Shelter.create!(name: "Burt's Barn",
                            address: "123 Sesame Street",
