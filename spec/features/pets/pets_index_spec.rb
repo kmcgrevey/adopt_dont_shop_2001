@@ -26,6 +26,7 @@ RSpec.describe "As a visitor", type: :feature do
                                    name: "Francisco",
                                    approx_age: 3,
                                    sex: "M")
+      
       visit "/pets"
 
       within "#pet-#{pet1.id}" do
