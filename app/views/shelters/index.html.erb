@@ -4,5 +4,8 @@
 
 
 <% @shelters.each do |shelter| %>
-  <h2><%= shelter.name %></h2>
+  <section id='shelter-<%=shelter.id %>'>
+    <h2><%= shelter.name %></h2>
+    <%= link_to "Update Info", "/shelters/#{shelter.id}/edit" %>
+  </section>
 <% end %>

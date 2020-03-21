@@ -26,7 +26,33 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).to have_button("New Shelter")
     end
 
+    it "I can click link next to each shelter to edit" do
+     shelter1 = Shelter.create!(name: "Burt's Barn",
+                                 address: "123 Sesame Street",
+                                 city: "New York",
+                                 state: "NY",
+                                 zip: "12345")
+      shelter2 = Shelter.create!(name: "Ernie's Everhome",
+                                 address: "505 Elmwood Drive",
+                                 city: "Chelsea",
+                                 state: "MA",
+                                 zip: "02468")
 
+      visit "/shelters"                           
+
+      within "#shelter-#{shelter1.id}" do
+        click_link "Update Info"
+      end
+      expect(current_path).to eq("/shelters/#{shelter1.id}/edit")
+      expect(page).to have_field(:name)
+      
+      visit "/shelters"                           
+  
+      within "#shelter-#{shelter2.id}" do
+        click_link "Update Info"
+      end
+      expect(current_path).to eq("/shelters/#{shelter2.id}/edit")
+      expect(page).to have_field(:name)
+    end
   end
-
 end
