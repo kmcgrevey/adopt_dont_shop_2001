@@ -21,7 +21,7 @@ RSpec.describe "As a visitor", type: :feature do
       fill_in :name, with: "Penelope"
       fill_in :description, with: "A face only everyone could love!"
       fill_in :approx_age, with: 1
-      select "female", from: "Sex"
+      choose(option: 'female')
 
       click_button "Create Pet"
 
