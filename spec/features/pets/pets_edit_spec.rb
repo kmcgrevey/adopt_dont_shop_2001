@@ -23,7 +23,7 @@ RSpec.describe "As a visitor", type: :feature do
 
       expect(current_path).to eq("/pets/#{pet2.id}/edit")
       fill_in :name, with: "Piglet"
-      fill_in :age, with: 27
+      fill_in :approx_age, with: 27
 
       click_button "Update Pet"
       
