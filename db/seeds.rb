@@ -14,13 +14,17 @@ shelter2 = Shelter.create!(name: "Ernie's Everhome",
 
 pet1 = shelter1.pets.create!(image: "https://assets.change.org/photos/3/yk/di/kLYkdIaPKknZpoD-800x450-noPad.jpg?1519383791",
                              name: "Penelope",
+                             description: "A face only everyone could love!",
                              approx_age: 1,
                              sex: "female")
 pet2 = shelter1.pets.create!(image: "https://external-preview.redd.it/P4X2K5llPbMkRkmFkycSPdDGAp051xJl0UF50bZRId4.jpg?auto=webp&s=5231b2f36d623b3258d36adbfbaf9be305f0d419",
                              name: "Petey",
+                             description: "Rubber baby bacon booties!",
                              approx_age: 1,
                              sex: "male")
 pet3 = shelter2.pets.create!(image: "https://www.thesun.co.uk/wp-content/uploads/2019/10/NINTCHDBPICT000528091420.jpg?strip=all&w=960",
                              name: "Francisco",
+                             description: "What, behind the rabbit!?",
                              approx_age: 3,
-                             sex: "male")
+                             sex: "male",
+                             status: 1)
