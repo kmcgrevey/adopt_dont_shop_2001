@@ -6,4 +6,8 @@ class Shelter < ApplicationRecord
                         :zip
   
   has_many :pets
+
+  def pet_count
+    pets.count
+  end
 end
