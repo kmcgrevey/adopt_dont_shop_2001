@@ -5,7 +5,7 @@
 <% @shelter.pets.each do |pet| %>
   <section id='shelter-pet-<%=pet.id %>'>
     <img style="width:35vw" src= <%= pet.image %>>
-    <h3><%= pet.name %></h3>
+    <h3><%= link_to "#{pet.name}", "/pets/#{pet.id}" %></h3>
     <p>Approx Age: <%= pet.approx_age %></p>
     <p>Sex: <%= pet.sex %></p>
     <p>Adoption Status: <%= pet.adopt_status %></p>
