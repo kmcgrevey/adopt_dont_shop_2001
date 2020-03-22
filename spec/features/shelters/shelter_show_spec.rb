@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "As a visitor", type: :feature do
-  describe "When I visit a shelters show page" do
+  describe "When I visit a shelter show page" do
     it "I can see that shelter and its info" do
       shelter1 = Shelter.create!(name: "Burt's Barn",
                                  address: "123 Sesame Street",
@@ -25,8 +25,18 @@ RSpec.describe "As a visitor", type: :feature do
       expect(page).not_to have_content(shelter2.name)
     end
   
-  
-  
-  end
+    it "I can click link to its pets page" do
+      shelter1 = Shelter.create!(name: "Burt's Barn",
+                                 address: "123 Sesame Street",
+                                 city: "New York",
+                                 state: "NY",
+                                 zip: "12345")
+      
+      visit "/shelters/#{shelter1.id}"
 
+      click_link "Our Pets"
+
+      expect(current_path).to eq("/shelters/#{shelter1.id}/pets")
+    end
+  end
 end
