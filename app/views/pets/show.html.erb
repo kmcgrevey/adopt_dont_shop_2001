@@ -1,11 +1,13 @@
 
-<section id='show-pet-<%=@pet.id %>'>
-  <img style="width:35vw" src= <%= @pet.image %>>
-  <h3><%= @pet.name %></h3>
-  <p><%= @pet.description %></p>
-  <p>Approx Age: <%= @pet.approx_age %></p>
-  <p>Sex: <%= @pet.sex %></p>
-  <p>Adoption Status: <%= @pet.adopt_status %></p>
+<section class = polaroid id='show-pet-<%=@pet.id %>'>
+  <div class = container><img src= <%= @pet.image %>></div>
+  <div class = petinfo>
+    <h3><%= @pet.name %></h3>
+    <p><%= @pet.description %></p>
+    <p>Approx Age: <%= @pet.approx_age %></p>
+    <p>Sex: <%= @pet.sex %></p>
+    <p>Adoption Status: <%= @pet.adopt_status %></p>
+  </div>
 </section>
 
 <%= link_to("Update Pet", "/pets/#{@pet.id}/edit") %>
